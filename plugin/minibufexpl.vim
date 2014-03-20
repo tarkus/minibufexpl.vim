@@ -680,13 +680,13 @@ function! <SID>StartExplorer(curBufNum)
   " names in the [MBE] window it also saves the last-pattern
   " and restores it.
   if !g:miniBufExplShowBufNumbers
-    nnoremap <buffer> l       :call search('\[[^\]]*\]')<CR>:<BS>
-    nnoremap <buffer> h       :call search('\[[^\]]*\]','b')<CR>:<BS>
+    nnoremap <buffer> <TAB>   :call search('\[[^\]]*\]')<CR>:<BS>
+    nnoremap <buffer> <S-TAB> :call search('\[[^\]]*\]','b')<CR>:<BS>
     nnoremap <buffer> <right> :call search('\[[^\]]*\]')<CR>:<BS>
     nnoremap <buffer> <left>  :call search('\[[^\]]*\]','b')<CR>:<BS>
   else
-    nnoremap <buffer> l       :call search('\[[0-9]*:[^\]]*\]')<CR>:<BS>
-    nnoremap <buffer> h       :call search('\[[0-9]*:[^\]]*\]','b')<CR>:<BS>
+    nnoremap <buffer> <TAB>   :call search('\[[0-9]*:[^\]]*\]')<CR>:<BS>
+    nnoremap <buffer> <S-TAB> :call search('\[[0-9]*:[^\]]*\]','b')<CR>:<BS>
     nnoremap <buffer> <right> :call search('\[[0-9]*:[^\]]*\]')<CR>:<BS>
     nnoremap <buffer> <left>  :call search('\[[0-9]*:[^\]]*\]','b')<CR>:<BS>
   endif
